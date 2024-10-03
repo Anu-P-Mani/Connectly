@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <style>
+      #navbar {
+      height: 60px;
+      width: 100%;
+      background-color: rgb(1, 18, 17);
+      /* position: fixed; */
+
+    }
+
+       #a{
+        background-color: black;
+        opacity: .6;
+        width: 600px;
+        height: 360px;
+        margin-left: 340px;
+        margin-top: 20px;
+        border-radius: 10px;
+       }
+       .form-label{
+        margin-left: 50px;
+        color: white;
+       }
+       #b3{
+          width: 220px;
+          background-color: #FCFDFD;
+         color:black;
+         border-color: #899896;
+         margin-top: 50px;
+        }
+        #b3:hover{
+          color: black;
+         box-shadow: 0 0 10px;
+        }
+        body {
+            background-image: url({% static "pexels-steven-arenas-371075.jpg" %});
+            background-size:cover;
+            background-position:center;
+            background-attachment:fixed;
+            background-repeat:no-repeat;     
+        }
+
+        #b{
+          margin-top: 50px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/234803766d.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" style="margin-top: 10px;margin-left: 10px;">
+          <a class="nav-link active" aria-current="page" href=""><b><i style="font-size: 20px;color: white;">Connectly</i></b></a>
+        </li>
+        <li class="nav-item" style="margin-left: 960px;margin-top:5px;">
+            <a class="nav-link" href="https://instagram.com/anu_p.mani?igshid=ZDc4ODBmNjlmNQ=="><i style="color:white;" class="fa-brands fa-instagram"></i></a>
+          </li>
+          <li class="nav-item" style="margin-left: 10px;margin-top:5px;">
+            <a class="nav-link" href="#"><i style="color:white;" class="fa-brands fa-github"></i></a>
+          </li>
+          <li class="nav-item" style="margin-left: 10px;margin-top:5px;">
+            <a class="nav-link" href="#"><i style="color:white;" class="fa-brands fa-facebook"></i></a>
+          </li>
+          <li class="nav-item" style="margin-left: 10px;margin-top:5px;">
+            <a class="nav-link" href="#"><i style="color:white;" class="fa-brands fa-twitter"></i></a>
+          </li>
+      </ul>
+    </div>
+  </nav>
+ <br>
+    <h2 style="color: white; margin-left: 350px;"><i><b>Tap to share <br> the moments</b></i></h2>
+
+  <div id="a">
+    <form method="post" enctype="multipart/form-data">
+         {% csrf_token %}
+   <br>
+    <label for="exampleInputPassword5" class="form-label">Username</label>
+    <input type="text" name="u_name" class="form-control" id="exampleInputPassword5" style="width:500px; margin-left: 50px;">
+    <br>
+    <label for="exampleInputPassword6" class="form-label">Password</label>
+    <input type="password" name="pwd" class="form-control" id="exampleInputPassword6" style="width:500px; margin-left: 50px;">
+   <center>
+   <button id="b3" type="submit" class="btn">Login</button><br><br>
+    <div>
+      <p style="color: white;">Don't have an account?<a href="http://127.0.0.1:8000/share_app/register/" style="text-decoration: none; color:red;"> Create new account</a></p>
+    </div>
+  </center>
+  <div id="b">
+    <center>
+    <h3 style="font-size: 14px;color: white;">Connectly<i class="fa-regular fa-copyright"></i>2024</h3>
+  </center>
+  </div>
+  </form>
+</div>
+</body>
+</html>
